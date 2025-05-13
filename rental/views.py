@@ -20,41 +20,32 @@ def car_single(request, car_id):
     # Hardcoded car data
     cars = {
         1: {
-            'name': 'Mercedes Grand Sedan',
-            'brand': 'Chevrolet',
-            'image': 'images/car-1.jpg',
-            'mileage': '40,000',
+            'id': 1,
+            'name': 'Dacia Duster',
+            'brand': 'Dacia',
+            'image': 'images/dacia.jpeg',
+            'mileage': 'less than 60,000 km',
             'transmission': 'Manual',
             'seats': '5 Adults',
             'luggage': '4 Bags',
-            'fuel': 'Petrol',
-            'description': 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.',
-            'description_extra': 'When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.'
+            'fuel': 'Diesel',
+            'description': 'The Dacia Duster is a versatile SUV designed for both city driving and off-road adventures in Tunisia.',
+            'description_extra': 'With high ground clearance and a robust build, it’s perfect for exploring the Tunisian countryside, from the beaches of Hammamet to the dunes of the Sahara.'
         },
         2: {
-            'name': 'Range Rover',
-            'brand': 'Subaru',
-            'image': 'images/car-2.jpg',
-            'mileage': '35,000',
+            'id': 2,
+            'name': 'Volkswagen Virtus',
+            'brand': 'Volkswagen',
+            'image': 'images/Volkswagen-Vertus.jpg',
+            'mileage': 'less than 80,000 km km',
             'transmission': 'Automatic',
             'seats': '5 Adults',
             'luggage': '3 Bags',
-            'fuel': 'Diesel',
-            'description': 'A luxurious SUV with advanced off-road capabilities and comfort.',
-            'description_extra': 'Ideal for both city driving and rugged adventures.'
-        },
-        3: {
-            'name': 'Mercedes Grand Sedan',
-            'brand': 'Chevrolet',
-            'image': 'images/car-3.jpg',
-            'mileage': '45,000',
-            'transmission': 'Manual',
-            'seats': '5 Adults',
-            'luggage': '4 Bags',
             'fuel': 'Petrol',
-            'description': 'A premium sedan with sleek design and top-notch features.',
-            'description_extra': 'Perfect for business trips and family outings.'
-        }
+            'description': 'The Volkswagen Virtus is a stylish and comfortable sedan ideal for city trips and business travel in Tunisia.',
+            'description_extra': 'Equipped with modern amenities like touchscreen infotainment, it ensures a smooth and enjoyable ride through Tunis or Sousse.'
+        },
+      
     }
     
     car = cars.get(car_id)

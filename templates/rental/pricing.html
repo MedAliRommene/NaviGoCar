@@ -41,8 +41,8 @@
 	          <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="{% url 'services' %}" class="nav-link">Services</a></li>
 	          <li class="nav-item active"><a href="{% url 'pricing' %}" class="nav-link">Pricing</a></li>
-	          <li class="nav-item"><a href="{% url 'cars' %}" class="nav-link">Cars</a></li>
-	         {% comment%} <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>{% endcomment %}
+	         {% comment %}<li class="nav-item"><a href="{% url 'cars' %}" class="nav-link">Cars</a></li>{% endcomment %}
+	          {% comment %}<li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>{% endcomment %}
 	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
@@ -50,7 +50,7 @@
 	  </nav>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{% static "images/bg_3.jpg" %}');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{% static 'images/bg_3.jpg' %}');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
@@ -72,16 +72,16 @@
 						      <tr class="text-center">
 						        <th> </th>
 						        <th> </th>
-						        <th class="bg-primary heading">Per Hour Rate</th>
-						        <th class="bg-dark heading">Per Day Rate</th>
-						        <th class="bg-black heading">Leasing</th>
+						        <th class="bg-primary heading">Per Day Rate</th>
+						        <th class="bg-dark heading">Per Week Rate</th>
+						        <th class="bg-black heading">Per Month Rate</th>
 						      </tr>
 						    </thead>
 						    <tbody>
 						      <tr class="">
-						      	<td class="car-image"><div class="img" style="background-image:url('{% static "images/car-1.jpg" %}');"></div></td>
+						      	<td class="car-image"><div class="img" style="background-image: url('{% static 'images/dacia.jpeg' %}');"></div></td>
 						        <td class="product-name">
-						        	<h3>Chevrolet SUV Car</h3>
+						        	<h3>Dacia Duster</h3>
 						        	<p class="mb-0 rated">
 						        		<span>rated:</span>
 						        		<span class="ion-ios-star"></span>
@@ -93,43 +93,43 @@
 						        </td>
 						        
 						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
+						        	<p class="btn-custom"><a href="https://wa.me/+21654923116?text=Hello,%20I’m%20interested%20in%20renting%20the%20Dacia%20Duster%20from%20NaviGoCar">Book Now</a></p>
 						        	<div class="price-rate">
 							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 10.99</span>
-							        		<span class="per">/per hour</span>
+							        		<span class="num"><small class="currency">D</small> 110</span>
+							        		<span class="per">/per day</span>
 							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
+							        	<span class="subheading">Fuel not included</span>
 						        	</div>
 						        </td>
 						        
 						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
+						        	<p class="btn-custom"><a href="https://wa.me/+21654923116?text=Hello,%20I’m%20interested%20in%20renting%20the%20Dacia%20Duster%20from%20NaviGoCar">Book Now</a></p>
 						        	<div class="price-rate">
 							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 60.99</span>
-							        		<span class="per">/per day</span>
+							        		<span class="num"><small class="currency">D</small> 650</span>
+							        		<span class="per">/per week</span>
 							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-						        </div>
+							        	<span class="subheading">Fuel not included</span>
+						        	</div>
 						        </td>
 
 						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
+						        	<p class="btn-custom"><a href="https://wa.me/+21654923116?text=Hello,%20I’m%20interested%20in%20renting%20the%20Dacia%20Duster%20from%20NaviGoCar">Book Now</a></p>
 						        	<div class="price-rate">
 							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 995.99</span>
+							        		<span class="num"><small class="currency">D</small> 2800</span>
 							        		<span class="per">/per month</span>
 							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
+							        	<span class="subheading">Fuel not included</span>
+						        	</div>
 						        </td>
 						      </tr><!-- END TR-->
 
 						      <tr class="">
-						      	<td class="car-image"><div class="img" style="background-image:url('{% static "images/car-2.jpg" %}');"></div></td>
+						      	<td class="car-image"><div class="img" style="background-image: url('{% static 'images/Volkswagen-Vertus.jpg' %}');"></div></td>
 						        <td class="product-name">
-						        	<h3>Chevrolet SUV Car</h3>
+						        	<h3>Volkswagen Virtus</h3>
 						        	<p class="mb-0 rated">
 						        		<span>rated:</span>
 						        		<span class="ion-ios-star"></span>
@@ -141,229 +141,36 @@
 						        </td>
 						        
 						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
+						        	<p class="btn-custom"><a href="https://wa.me/+21654923116?text=Hello,%20I’m%20interested%20in%20renting%20the%20Volkswagen%20Virtus%20from%20NaviGoCar">Book Now</a></p>
 						        	<div class="price-rate">
 							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 10.99</span>
-							        		<span class="per">/per hour</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-						        
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 60.99</span>
+							        		<span class="num"><small class="currency">D</small> 130</span>
 							        		<span class="per">/per day</span>
 							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
+							        	<span class="subheading">Fuel not included</span>
+						        	</div>
+						        </td>
+						        
+						        <td class="price">
+						        	<p class="btn-custom"><a href="https://wa.me/+21654923116?text=Hello,%20I’m%20interested%20in%20renting%20the%20Volkswagen%20Virtus%20from%20NaviGoCar">Book Now</a></p>
+						        	<div class="price-rate">
+							        	<h3>
+							        		<span class="num"><small class="currency">D</small> 850</span>
+							        		<span class="per">/per week</span>
+							        	</h3>
+							        	<span class="subheading">Fuel not included</span>
+						        	</div>
 						        </td>
 
 						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
+						        	<p class="btn-custom"><a href="https://wa.me/+21654923116?text=Hello,%20I’m%20interested%20in%20renting%20the%20Volkswagen%20Virtus%20from%20NaviGoCar">Book Now</a></p>
 						        	<div class="price-rate">
 							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 995.99</span>
+							        		<span class="num"><small class="currency">D</small> 3200</span>
 							        		<span class="per">/per month</span>
 							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-						      </tr><!-- END TR-->
-
-						      <tr class="">
-						      	<td class="car-image"><div class="img" style="background-image:url('{% static "images/car-3.jpg" %}');"></div></td>
-						        <td class="product-name">
-						        	<h3>Chevrolet SUV Car</h3>
-						        	<p class="mb-0 rated">
-						        		<span>rated:</span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        	</p>
-						        </td>
-						        
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 10.99</span>
-							        		<span class="per">/per hour</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-						        
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 60.99</span>
-							        		<span class="per">/per day</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 995.99</span>
-							        		<span class="per">/per month</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-						      </tr><!-- END TR-->
-
-						      <tr class="">
-						      	<td class="car-image"><div class="img" style="background-image:url('{% static "images/car-4.jpg" %}');"></div></td>
-						        <td class="product-name">
-						        	<h3>Chevrolet SUV Car</h3>
-						        	<p class="mb-0 rated">
-						        		<span>rated:</span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        	</p>
-						        </td>
-						        
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 10.99</span>
-							        		<span class="per">/per hour</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-						        
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 60.99</span>
-							        		<span class="per">/per day</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						 FANs
-						        </td>
-
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 995.99</span>
-							        		<span class="per">/per month</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-						      </tr><!-- END TR-->
-
-						      <tr class="">
-						      	<td class="car-image"><div class="img" style="background-image:url('{% static "images/car-5.jpg" %}');"></div></td>
-						        <td class="product-name">
-						        	<h3>Chevrolet SUV Car</h3>
-						        	<p class="mb-0 rated">
-						        		<span>rated:</span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        	</p>
-						        </td>
-						        
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 10.99</span>
-							        		<span class="per">/per hour</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-						        
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 60.99</span>
-							        		<span class="per">/per day</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 995.99</span>
-							        		<span class="per">/per month</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-						      </tr><!-- END TR-->
-
-						      <tr class="">
-						      	<td class="car-image"><div class="img" style="background-image:url('{% static "images/car-6.jpg" %}');"></div></td>
-						        <td class="product-name">
-						        	<h3>Chevrolet SUV Car</h3>
-						        	<p class="mb-0 rated">
-						        		<span>rated:</span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        		<span class="ion-ios-star"></span>
-						        	</p>
-						        </td>
-						        
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 10.99</span>
-							        		<span class="per">/per hour</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-						        
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 60.99</span>
-							        		<span class="per">/per day</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
-						        </td>
-
-						        <td class="price">
-						        	<p class="btn-custom"><a href="{% url 'cars' %}">Rent a car</a></p>
-						        	<div class="price-rate">
-							        	<h3>
-							        		<span class="num"><small class="currency">$</small> 995.99</span>
-							        		<span class="per">/per month</span>
-							        	</h3>
-							        	<span class="subheading">$3/hour fuel surcharges</span>
-							        </div>
+							        	<span class="subheading">Fuel not included</span>
+						        	</div>
 						        </td>
 						      </tr><!-- END TR-->
 						    </tbody>
@@ -374,13 +181,13 @@
 			</div>
 		</section>
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
+   <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2"><a href="{% url 'home' %}" class="logo">NaviGo<span>Car</span></a></h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>NaviGoCar offers reliable and affordable car rentals across Tunisia, helping you explore Tunis, Sousse, Hammamet, and beyond with ease.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -394,7 +201,7 @@
               <ul class="list-unstyled">
                 <li><a href="{% url 'about' %}" class="py-2 d-block">About</a></li>
                 <li><a href="{% url 'services' %}" class="py-2 d-block">Services</a></li>
-                <li><a href="#" class="py-2 d-block">Term and Conditions</a></li>
+                <li><a href="#" class="py-2 d-block">Terms and Conditions</a></li>
                 <li><a href="#" class="py-2 d-block">Best Price Guarantee</a></li>
                 <li><a href="#" class="py-2 d-block">Privacy & Cookies Policy</a></li>
               </ul>
@@ -405,21 +212,21 @@
               <h2 class="ftco-heading-2">Customer Support</h2>
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">FAQ</a></li>
-                <li><a href="#" class="py-2 d-block">Payment Option</a></li>
+                <li><a href="#" class="py-2 d-block">Payment Options</a></li>
                 <li><a href="#" class="py-2 d-block">Booking Tips</a></li>
-                <li><a href="#" class="py-2 d-block">How it works</a></li>
+                <li><a href="#" class="py-2 d-block">How It Works</a></li>
                 <li><a href="{% url 'contact' %}" class="py-2 d-block">Contact Us</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Have a Question?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Hammamet, Tunisia</span></li>
+	                <li><a href="tel://+21654923116"><span class="icon icon-phone"></span><span class="text">+216 54 923 116</span></a></li>
+	                <li><a href="mailto:info@navigocar.com"><span class="icon icon-envelope"></span><span class="text">info@navigocar.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -428,15 +235,14 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib and Updated By Daly Rommen</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>
     </footer>
     
-  
-
+    
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
@@ -454,8 +260,6 @@
   <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
   <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
   <script src="{% static 'js/scrollax.min.js' %}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="{% static 'js/google-map.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
     
   </body>

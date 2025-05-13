@@ -41,8 +41,8 @@
 	          <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="{% url 'services' %}" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="{% url 'pricing' %}" class="nav-link">Pricing</a></li>
-	          <li class="nav-item"><a href="{% url 'cars' %}" class="nav-link">Cars</a></li>
-	          <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+	          {% comment %}<li class="nav-item"><a href="{% url 'cars' %}" class="nav-link">Cars</a></li>{% endcomment %}
+	          {% comment %}<li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>{% endcomment %}
 	          <li class="nav-item active"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
@@ -72,7 +72,7 @@
 			          	<div class="icon mr-3">
 			          		<span class="icon-map-o"></span>
 			          	</div>
-			            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+			            <p><span>Address:</span> 	Hammamet, Tunisia</p>
 			          </div>
 		          </div>
 		          <div class="col-md-12">
@@ -80,7 +80,7 @@
 			          	<div class="icon mr-3">
 			          		<span class="icon-mobile-phone"></span>
 			          	</div>
-			            <p><span>Phone:</span> <a href="tel://+1235235598">+ 1235 2355 98</a></p>
+			            <p><span>Phone:</span> <a href="tel://+1235235598">	+216 54 923 116</a></p>
 			          </div>
 		          </div>
 		          <div class="col-md-12">
@@ -88,53 +88,20 @@
 			          	<div class="icon mr-3">
 			          		<span class="icon-envelope-o"></span>
 			          	</div>
-			            <p><span>Email:</span> <a href="mailto:info@navigocar.com">info@navigocar.com</a></p>
+			            <p><span>Email:</span> <a href="mailto:info@navigocar.com">	info@navigocar.com</a></p>
 			          </div>
 		          </div>
 		        </div>
           </div>
-          <div class="col-md-8 block-9 mb-md-5">
-            {% if messages %}
-              {% for message in messages %}
-                <div class="alert alert-{% if message.tags == 'success' %}success{% else %}danger{% endif %} alert-dismissible fade show" role="alert">
-                  {{ message }}
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-              {% endfor %}
-            {% endif %}
-            <form action="{% url 'contact' %}" method="post" class="bg-light p-5 contact-form">
-              {% csrf_token %}
-              <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-          </div>
-        </div>
-        
-      </div>
+          
     </section>
-
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
+ <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2"><a href="{% url 'home' %}" class="logo">NaviGo<span>Car</span></a></h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>NaviGoCar offers reliable and affordable car rentals across Tunisia, helping you explore Tunis, Sousse, Hammamet, and beyond with ease.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -148,7 +115,7 @@
               <ul class="list-unstyled">
                 <li><a href="{% url 'about' %}" class="py-2 d-block">About</a></li>
                 <li><a href="{% url 'services' %}" class="py-2 d-block">Services</a></li>
-                <li><a href="#" class="py-2 d-block">Term and Conditions</a></li>
+                <li><a href="#" class="py-2 d-block">Terms and Conditions</a></li>
                 <li><a href="#" class="py-2 d-block">Best Price Guarantee</a></li>
                 <li><a href="#" class="py-2 d-block">Privacy & Cookies Policy</a></li>
               </ul>
@@ -156,23 +123,23 @@
           </div>
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h3 class="ftco-heading-2">Customer Support</h3>
+              <h2 class="ftco-heading-2">Customer Support</h2>
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">FAQ</a></li>
-                <li><a href="#" class="py-2 d-block">Payment Option</a></li>
+                <li><a href="#" class="py-2 d-block">Payment Options</a></li>
                 <li><a href="#" class="py-2 d-block">Booking Tips</a></li>
-                <li><a href="#" class="py-2 d-block">How it works</a></li>
+                <li><a href="#" class="py-2 d-block">How It Works</a></li>
                 <li><a href="{% url 'contact' %}" class="py-2 d-block">Contact Us</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h3 class="ftco-heading-2">Have a Questions?</h3>
+            	<h2 class="ftco-heading-2">Have a Question?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">198 West 21th Street, Suite 721 New York NY 10016</span></li>
-	                <li><a href="tel://+1235235598"><span class="icon icon-phone"></span><span class="text">+ 1235 2355 98</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Hammamet, Tunisia</span></li>
+	                <li><a href="tel://+21654923116"><span class="icon icon-phone"></span><span class="text">+216 54 923 116</span></a></li>
 	                <li><a href="mailto:info@navigocar.com"><span class="icon icon-envelope"></span><span class="text">info@navigocar.com</span></a></li>
 	              </ul>
 	            </div>
@@ -182,7 +149,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib and Updated By Daly Rommen</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
