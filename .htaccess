@@ -1,0 +1,19 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Serve static files directly
+RewriteCond %{REQUEST_URI} ^/static/
+RewriteRule ^static/(.*)$ staticfiles/$1 [L]
+
+# Serve media files directly
+RewriteCond %{REQUEST_URI} ^/media/
+RewriteRule ^media/(.*)$ media/$1 [L]
+
+# Route everything else to WSGI
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ NaviGoCar/wsgi.py/$1 [QSA,L]
+
+# PHP handler configuration
+AddHandler fcgid-script .php
+FcgidInitialEnv PHPRC "/usr/local/lib/php.ini"
+FcgidWrapper "/usr/local/bin/php-cgi" .php 
